@@ -10,13 +10,14 @@
     <TextView
         android:id="@+id/tvMessageSC"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/sender_box"
         android:fontFamily="@font/roboto"
-        android:paddingVertical="7dp"
         android:paddingHorizontal="15dp"
+        android:paddingVertical="7dp"
         android:text="@string/message"
         android:textColor="@color/text"
-        android:textSize="15sp" />
+        android:textSize="19sp" />
 
 </LinearLayout>

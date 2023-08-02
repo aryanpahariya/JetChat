@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryDark"
+    android:background="#5ba0f0"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <!--    header-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,16 +21,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/spline"
+            android:fontFamily="@font/fredoka_one"
             android:text="@string/app_name"
-            android:textColor="@color/text"
+            android:textColor="@color/white"
+            android:letterSpacing="0.06"
             android:textSize="28sp" />
 
         <!--        profile-->
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/primaryDark"
             app:cardCornerRadius="20dp">
 
             <ImageView
@@ -43,13 +42,13 @@
         </androidx.cardview.widget.CardView>
 
 
-            <ImageView
-                android:id="@+id/btnLogoutMA"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="15dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_logout" />
+        <ImageView
+            android:id="@+id/btnLogoutMA"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_logout" />
 
     </LinearLayout>
 
@@ -60,7 +59,7 @@
         android:id="@+id/rvChatList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primaryDark"
+        android:background="@color/white"
         android:layout_marginTop="15dp"
         tools:listitem="@layout/user_item" />
 

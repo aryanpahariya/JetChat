@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Shit Chat</string>
+    <string name="app_name">JetChat</string>
     <string name="person_name">Elena</string>
     <string name="message">How are you?</string>
     <string name="time">08:20 AM</string>
-    <string name="password">Password</string>
-    <string name="email">Email</string>
-    <string name="login">Login</string>
+    <string name="password">Enter your Password</string>
+    <string name="email">Enter your Email</string>
+    <string name="login">Log in</string>
     <string name="login_with_google">Login with Google</string>
     <string name="name">Name</string>
     <string name="sign_up">Sign Up</string>

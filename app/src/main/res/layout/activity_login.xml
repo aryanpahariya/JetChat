@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryDark"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingHorizontal="35dp"
@@ -13,9 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:fontFamily="@font/open_sans"
+        android:fontFamily="@font/montserrat_alternates"
         android:text="@string/login"
-        android:textColor="@color/text"
+        android:letterSpacing="0.04"
+        android:textColor="#1c1b1b"
+        android:textStyle="bold"
         android:textSize="30sp" />
 
     <ImageView
@@ -23,7 +25,7 @@
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/people" />
+        android:src="@drawable/img" />
 
 
     <!--    email-->
@@ -33,13 +35,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
+        android:fontFamily="@font/montserrat"
         android:hint="@string/email"
-        android:nextFocusDown="@id/etPasswordLA"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:nextFocusDown="@id/etPasswordLA"
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
-        android:textColor="@color/text"
-        android:textColorHint="@color/textLight"
+        android:textColor="#292727"
+        android:textColorHint="#292727"
         android:textSize="18sp" />
 
     <!--    password-->
@@ -50,12 +54,14 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
         android:hint="@string/password"
-        android:nextFocusDown="@id/btnLogin"
         android:inputType="textPassword"
+        android:fontFamily="@font/montserrat"
+        android:minHeight="48dp"
+        android:nextFocusDown="@id/btnLogin"
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
-        android:textColor="@color/text"
-        android:textColorHint="@color/textLight"
+        android:textColor="#292727"
+        android:textColorHint="#292727"
         android:textSize="18sp" />
 
     <LinearLayout
@@ -67,17 +73,21 @@
 
         <CheckBox
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Remember Me"
-            android:textColor="@color/text"
-            android:textSize="15sp" />
+            android:letterSpacing="0.03"
+            android:textColor="#424242"
+            android:textSize="15sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgot_password"
-            android:textColor="@color/colorAccentBlue"
+            android:textColor="#ababab"
+            android:fontFamily="@font/montserrat_medium"
             android:textSize="16sp" />
 
     </LinearLayout>
@@ -86,80 +96,46 @@
     <!--    login button-->
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/spline"
+        android:fontFamily="@font/montserrat"
         android:paddingHorizontal="20dp"
+        android:background="@drawable/btn_login"
         android:paddingVertical="10dp"
-        android:text="@string/login" />
+        android:text="@string/login"
+        android:textColor="#1c1b1b"
+        android:textSize="20dp"
+        android:textAllCaps="false" />
 
-        <!--    sign up message-->
+
+    <!--    google sign in button-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="@string/dont_have_an_account"
-            android:textColor="@color/text"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tvSignUpLA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:padding="5dp"
-            android:text="@string/sign_up"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <!--    horizontal line-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center">
-
-
-        <View
-            android:layout_width="120dp"
-
-            android:layout_height="1dp"
-            android:background="@color/primary" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:fontFamily="@font/spline"
-            android:text="OR"
-            android:textColor="@color/textLight"
+            android:fontFamily="@font/montserrat_alternates"
+            android:text="Or connect with"
+            android:textColor="#ababab"
             android:textSize="20sp" />
-
-
-        <View
-            android:layout_width="120dp"
-            android:layout_height="1dp"
-            android:background="@color/primary" />
-
     </LinearLayout>
 
-    <!--    google sign in button-->
+    <!--    signUp-->
+
     <LinearLayout
         android:id="@+id/btnGoogleLogin"
-        android:layout_width="200dp"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/round_box"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_box"
         android:gravity="center"
         android:padding="10dp"
         android:layout_marginBottom="30dp">
@@ -173,9 +149,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
+            android:paddingLeft="2dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/login_with_google"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textColor="#424242"
+            android:textSize="20sp" />
     </LinearLayout>
+
+    <!--    sign up message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/dont_have_an_account"
+            android:textColor="#ababab"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSignUpLA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:letterSpacing="0.04"
+            android:text="@string/sign_up"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_medium"/>
+    </LinearLayout>
+
 
 </LinearLayout>

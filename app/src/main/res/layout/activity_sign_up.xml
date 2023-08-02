@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryDark"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingHorizontal="35dp"
@@ -13,11 +13,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans"
+        android:fontFamily="@font/montserrat_alternates"
         android:layout_gravity="start"
         android:text="@string/sign_up"
-        android:textColor="@color/text"
-        android:textSize="30sp" />
+        android:textColor="#1c1b1b"
+        android:textStyle="bold"
+        android:textSize="30sp"  />
 
     <!--    vector image-->
     <ImageView
@@ -25,22 +26,25 @@
         android:layout_height="200dp"
         android:layout_marginTop="30dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/people" />
-
+        android:src="@drawable/img" />
     <!--name-->
+
+
     <EditText
         android:id="@+id/etNameSA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
+        android:fontFamily="@font/montserrat"
         android:hint="@string/name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:nextFocusDown="@id/etEmailSA"
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
-        android:textColor="@color/text"
-        android:textColorHint="@color/textLight"
+        android:textColor="#292727"
+        android:textColorHint="#292727"
         android:textSize="18sp" />
 
     <!--    email-->
@@ -50,13 +54,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
+        android:fontFamily="@font/montserrat"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:nextFocusDown="@id/etPasswordSA"
+        android:minHeight="48dp"
+        android:nextFocusDown="@id/etPasswordLA"
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
-        android:textColor="@color/text"
-        android:textColorHint="@color/textLight"
+        android:textColor="#292727"
+        android:textColorHint="#292727"
         android:textSize="18sp" />
 
     <!--    password-->
@@ -66,92 +72,60 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
-        android:hint="@string/password"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter Password"
         android:inputType="textPassword"
-        android:nextFocusDown="@id/btnSignUp"
+        android:minHeight="48dp"
+        android:nextFocusDown="@id/btnLogin"
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
-        android:textColor="@color/text"
-        android:textColorHint="@color/textLight"
+        android:textColor="#292727"
+        android:textColorHint="#292727"
         android:textSize="18sp" />
 
 
     <!--    sign up button-->
     <Button
         android:id="@+id/btnSignUp"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/spline"
-        android:paddingHorizontal="30dp"
+        android:fontFamily="@font/montserrat"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/btn_login"
         android:paddingVertical="10dp"
-        android:text="@string/sign_up" />
+        android:text="@string/sign_up"
+        android:textColor="#1c1b1b"
+        android:textSize="20dp"
+        android:textAllCaps="false"/>
 
-
-    <!--    login message-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="@string/already_haven_an_account"
-            android:textColor="@color/text"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tvLoginSA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:padding="5dp"
-            android:text="@string/login"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
-    </LinearLayout>
 
     <!--    horizontal line-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:gravity="center">
-
-
-        <View
-            android:layout_width="120dp"
-            android:layout_height="1dp"
-            android:background="@color/primary" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:fontFamily="@font/spline"
-            android:text="OR"
-            android:textColor="@color/textLight"
-            android:textSize="20sp" />
-
-
-        <View
-            android:layout_width="120dp"
-            android:layout_height="1dp"
-            android:background="@color/primary" />
+            android:fontFamily="@font/montserrat_alternates"
+            android:text="Or connect with"
+            android:textColor="#ababab"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
     <!--    google sign un button-->
     <LinearLayout
         android:id="@+id/btnGoogleSignUp"
-        android:layout_width="200dp"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:padding="10dp">
@@ -165,10 +139,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="@string/sign_up_with_google"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:text="@string/login_with_google"
+            android:textColor="#424242"
+            android:textSize="20sp" />
     </LinearLayout>
+
+    <!--    login message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/already_haven_an_account"
+            android:textColor="#ababab"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="16sp"  />
+
+        <TextView
+            android:id="@+id/tvLoginSA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="@string/login"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:letterSpacing="0.04"/>
+    </LinearLayout>
+
 
 
 </LinearLayout>
