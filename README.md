@@ -4,7 +4,8 @@
 |:---:|:---:|
 | Login UI | Sign Up UI |
 
-| <img src="screenshots/Screenshot_20230803_005757.png" width="200px"> |
+| <img src="screenshots/Screenshot_20230803_005757.png" width="200px"> | 
+| chats |
 
 ## Features
 
